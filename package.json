@@ -1,0 +1,40 @@
+{
+  "name": "@mycl/hypha",
+  "version": "0.0.1",
+  "description": "Solana underground data layer. ZK-compressed feed marketplace SDK built on Light Protocol.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "jest --passWithNoTests",
+    "lint": "tsc --noEmit",
+    "bench": "ts-node scripts/bench.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "solana", "zk-compression", "light-protocol", "data-feed",
+    "mycelium", "oracle", "sdk"
+  ],
+  "author": "mycl-labs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mycl-labs/mycl"
+  },
+  "homepage": "https://mycldot.fun",
+  "bugs": { "url": "https://github.com/mycl-labs/mycl/issues" },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.2"
+  }
+}
