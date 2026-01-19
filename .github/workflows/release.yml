@@ -1,0 +1,23 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Create archive
+        run: tar -czf mycl-hypha.tgz dist package.json README.md LICENSE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mycl-hypha
+          path: mycl-hypha.tgz
