@@ -1,3 +1,4 @@
+// Protocol identifiers and tunables used across the SDK.
 export const PROTOCOL_NAME = 'MYCL';
 export const DEFAULT_RPC = 'https://api.mainnet-beta.solana.com';
 export const LIGHT_PHOTON_RPC = 'https://mainnet.helius-rpc.com';
