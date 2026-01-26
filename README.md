@@ -80,7 +80,7 @@ const unsub = client.subscribe(feeds[0], (sample) => console.log(sample.value));
 | Publisher batch cost | 0.0042 SOL | 0.00004 SOL | 100x cheaper |
 
 Numbers come from the bench script in `scripts/bench.ts`; run it against your own RPC
-endpoint to reproduce.
+endpoint to reproduce. Slot cadence is assumed at 400 ms.
 
 ## Contributing
 
@@ -90,4 +90,3 @@ For bigger changes open an issue first so the interface can be discussed.
 ## License
 
 MIT. Copyright (c) 2025-2026 mycl-labs.
-
