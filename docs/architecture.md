@@ -24,3 +24,8 @@ flowchart LR
 A single compressed tree of depth 20 holds up to 1_048_576 leaves. At the
 default slot cadence of 400ms that covers roughly a full day of 1-second
 samples for several hundred feeds before rotation is required.
+
+## Rotation policy
+
+Trees rotate once they reach 90% fill to avoid probabilistic failure modes
+in the appender queue. Rotation is transparent to subscribers.
