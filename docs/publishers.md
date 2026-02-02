@@ -27,3 +27,8 @@ await client.publishBatch(feed.encodeBatch());
 
 Keep batches below `MAX_BATCH_SIZE` (256 samples) for predictable proof depth
 and lower transaction fees.
+
+## Signing
+
+Batches should be signed with the publisher keypair before submission.
+The indexer will reject unsigned batches above the rate-limit threshold.
