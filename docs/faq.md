@@ -17,3 +17,8 @@ we recommend pinning to a dedicated endpoint for stable latency.
 ### Where does the token fit in?
 `$MYCL` is a utility token for read credits, publisher staking, and governance
 of the protocol fee split. It is not required to consume the SDK.
+
+### Which wallets work?
+
+Any standard Solana wallet that signs arbitrary messages can publish. The SDK
+does not wrap the wallet; bring your own adapter.
