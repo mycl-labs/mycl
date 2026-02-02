@@ -22,3 +22,8 @@ const feeds = await client.listFeeds();
 npx ts-node examples/publish-price-feed.ts
 npx ts-node examples/subscribe-bot.ts
 ```
+
+## Troubleshooting
+
+If `npm run build` complains about TypeScript versions, pin `typescript@5.5.x`
+in your environment and clear `node_modules` before retrying.
