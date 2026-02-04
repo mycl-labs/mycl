@@ -33,6 +33,8 @@ export class Feed {
 
   isEmpty(): boolean { return this.samples.length === 0; }
 
+  reset(): void { this.samples.length = 0; }
+
   stats() {
     if (this.samples.length === 0) return { min: 0, max: 0, mean: 0, count: 0 };
     let min = Infinity;
