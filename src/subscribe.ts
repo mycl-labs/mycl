@@ -36,6 +36,8 @@ export class SubscriptionManager {
     return n;
   }
 
+  has(slug: string): boolean { return this.active.has(slug); }
+
   list(): FeedMetadata[] {
     return [...this.active.values()].map((s) => s.meta);
   }
