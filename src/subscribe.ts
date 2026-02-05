@@ -42,6 +42,8 @@ export class SubscriptionManager {
     return [...this.active.values()].map((s) => s.meta);
   }
 
+  clear(): void { this.active.clear(); }
+
   size(): number {
     return this.active.size;
   }
