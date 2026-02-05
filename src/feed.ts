@@ -16,7 +16,7 @@ export class Feed {
     return this;
   }
 
-  latest(n = 10): FeedSample[] {
+  latest(n: number = 10): FeedSample[] {
     return this.samples.slice(-n);
   }
 
