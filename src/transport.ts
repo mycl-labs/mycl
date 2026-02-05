@@ -13,7 +13,7 @@ export async function rpcCall<T>(opts: TransportOptions, method: string, params:
   const retries = opts.retries ?? DEFAULT_RETRY_MAX;
   const backoff = opts.backoffMs ?? DEFAULT_RETRY_BACKOFF_MS;
   const timeout = opts.timeoutMs ?? 15000;
-  const fetcher = opts.fetchImpl ?? fetch;
+  const fetcher = opts.fetchImpl ?? (globalThis.fetch as typeof fetch);
   let lastErr: unknown;
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
