@@ -36,7 +36,7 @@ export class Feed {
   reset(): void { this.samples.length = 0; }
 
   stats() {
-    if (this.samples.length === 0) return { min: 0, max: 0, mean: 0, count: 0 };
+    if (this.isEmpty()) return { min: 0, max: 0, mean: 0, count: 0 };
     let min = Infinity;
     let max = -Infinity;
     let sum = 0;
