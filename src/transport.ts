@@ -26,6 +26,7 @@ export async function rpcCall<T>(opts: TransportOptions, method: string, params:
         signal: ctrl.signal,
       });
       clearTimeout(timer);
+      if (res.status === 429) throw new TransportError('rate limited', 429);
       if (!res.ok) throw new TransportError(`rpc ${method} status ${res.status}`, res.status);
       const json = await res.json() as { result?: T; error?: { message: string } };
       if (json.error) throw new TransportError(json.error.message);
