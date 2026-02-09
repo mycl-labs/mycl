@@ -33,7 +33,7 @@ function dedupeRuns(input: Uint8Array): Uint8Array {
   let i = 0;
   while (i < input.length) {
     let run = 1;
-    while (i + run < input.length && input[i + run] === input[i] && run < 255) run++;
+    while (i + run < input.length && input[i + run] === input[i] && run < 254) run++;
     out.push(run, input[i]);
     i += run;
   }
