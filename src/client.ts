@@ -44,6 +44,10 @@ export class HyphaClient {
     return FeedMetadataSchema.parse(result);
   }
 
+  async publisherOnline(pubkey: string): Promise<boolean> {
+    return rpcCall(this.transport, 'mycl_publisherStatus', [pubkey]);
+  }
+
   async publishBatch(batch: FeedBatch): Promise<{ signature: string }>{
     const parsed = FeedBatchSchema.parse(batch);
     return rpcCall(this.transport, 'mycl_publishBatch', [parsed]);
