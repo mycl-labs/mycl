@@ -35,6 +35,10 @@ export class HyphaClient {
     return result.map((m) => FeedMetadataSchema.parse(m));
   }
 
+  async getTreeRoot(): Promise<string> {
+    return rpcCall(this.transport, 'mycl_getTreeRoot', []);
+  }
+
   async getFeed(slug: string): Promise<FeedMetadata> {
     const result = await rpcCall<FeedMetadata>(this.transport, 'mycl_getFeed', [slug]);
     return FeedMetadataSchema.parse(result);
