@@ -10,6 +10,7 @@ export interface CompressedPayload {
 }
 
 export function compress(input: Uint8Array): CompressedPayload {
+  // Small RLE over raw bytes. Good enough for streaming numeric samples.
   const body = dedupeRuns(input);
   const bytes = concatBytes(HEADER, body);
   return {
