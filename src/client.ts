@@ -65,6 +65,8 @@ export class HyphaClient {
     return this.subs.size();
   }
 
+  latestRoot: string = '';
+
   buildFeed(meta: FeedMetadata, samples: FeedSample[] = []): Feed {
     return new Feed(meta, samples);
   }
