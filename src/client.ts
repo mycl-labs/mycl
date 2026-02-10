@@ -53,7 +53,7 @@ export class HyphaClient {
     return rpcCall(this.transport, 'mycl_publishBatch', [parsed]);
   }
 
-  async fetchSamples(slug: string, limit = 100): Promise<FeedSample[]> {
+  async fetchSamples(slug: string, limit: number = 100): Promise<FeedSample[]> {
     return rpcCall(this.transport, 'mycl_getSamples', [slug, limit]);
   }
 
