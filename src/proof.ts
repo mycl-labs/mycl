@@ -20,6 +20,8 @@ export function verifyEnvelope(env: ProofEnvelope): boolean {
   }
 }
 
+export function envelopeDepth(env: ProofEnvelope): number { return env.path.length; }
+
 export function describeEnvelope(env: ProofEnvelope): string {
   return `root=${env.root.slice(0, 12)}... index=${env.index} depth=${env.path.length}`;
 }
