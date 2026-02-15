@@ -16,6 +16,8 @@ export function hashNode(left: Uint8Array, right: Uint8Array): Uint8Array {
   return new Uint8Array(h.digest());
 }
 
+export function treeDepth(leaves: number): number { return Math.max(1, Math.ceil(Math.log2(Math.max(1, leaves)))); }
+
 export function buildRoot(leaves: Uint8Array[]): Uint8Array {
   if (leaves.length === 0) return new Uint8Array(32);
   let level = leaves.map(hashLeaf);
