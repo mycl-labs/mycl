@@ -15,7 +15,7 @@ export const FeedMetadataSchema = z.object({
   slug: z.string().min(3).max(64),
   title: z.string().min(1).max(120),
   category: FeedCategory,
-  description: z.string().max(500),
+  description: z.string().max(500).default(''),
   publisher: z.string(),
   pricePerRead: z.number().nonnegative(),
   decimals: z.number().int().min(0).max(18).default(6),
