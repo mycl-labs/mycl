@@ -20,6 +20,7 @@ export const FeedMetadataSchema = z.object({
   pricePerRead: z.number().nonnegative(),
   decimals: z.number().int().min(0).max(18).default(6),
   updatedAt: z.number().int().nonnegative().optional(),
+  tags: z.array(z.string()).max(12).default([]),
 });
 export type FeedMetadata = z.infer<typeof FeedMetadataSchema>;
 
