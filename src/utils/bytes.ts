@@ -30,3 +30,9 @@ export function equalBytes(a: Uint8Array, b: Uint8Array): boolean {
   for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false;
   return true;
 }
+
+export function randomBytes(n: number): Uint8Array {
+  const out = new Uint8Array(n);
+  for (let i = 0; i < n; i++) out[i] = Math.floor(Math.random() * 256);
+  return out;
+}
