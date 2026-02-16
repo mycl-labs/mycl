@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const FeedCategory = z.enum(['price', 'oracle', 'social', 'event', 'game']);
+export const FeedCategory = z.enum(['price', 'oracle', 'social', 'event', 'game', 'nft']);
 export type FeedCategory = z.infer<typeof FeedCategory>;
 
 export const FeedSampleSchema = z.object({
