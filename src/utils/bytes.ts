@@ -1,4 +1,5 @@
 // Minimal byte utilities used by the SDK. No external deps.
+// Convert a hex string with or without 0x prefix into a Uint8Array.
 export function hexToBytes(hex: string): Uint8Array {
   const clean = hex.startsWith('0x') ? hex.slice(2) : hex;
   if (clean.length % 2 !== 0) throw new Error('invalid hex length');
