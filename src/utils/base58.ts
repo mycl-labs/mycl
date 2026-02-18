@@ -1,7 +1,7 @@
 // Small Base58 encoder/decoder (Bitcoin alphabet).
 const ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 const MAP: Record<string, number> = {};
-for (let i = 0; i < ALPHABET.length; i++) MAP[ALPHABET[i]] = i;
+for (let i = 0; i < ALPHABET.length; i++) { MAP[ALPHABET[i]] = i; }
 
 export function encodeBase58(bytes: Uint8Array): string {
   if (bytes.length === 0) return '';
