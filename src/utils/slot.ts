@@ -19,3 +19,7 @@ export function formatSlotDelta(slots: number): string {
   if (sec < 3600) return `${(sec / 60).toFixed(1)}m`;
   return `${(sec / 3600).toFixed(2)}h`;
 }
+
+export function slotAt(ts: number, genesisTs: number = 0): number {
+  return Math.max(0, Math.floor((ts - genesisTs) / SLOT_MS));
+}
