@@ -1,4 +1,5 @@
 // Slot helpers. Slots are Solana's clock primitive; ~400ms target.
+// Solana target slot length in milliseconds.
 export const SLOT_MS = 400;
 
 export function slotsFromMillis(ms: number): number {
