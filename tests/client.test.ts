@@ -16,3 +16,13 @@ describe('HyphaClient', () => {
     expect(c.subscriptionCount()).toBe(0);
   });
 });
+
+test('subscribe returns a disposable', () => {
+  const { HyphaClient } = require('../src');
+  const c = new HyphaClient();
+  const meta = { slug: 'sol.usd.spot', title: 't', category: 'price', description: '', publisher: 'p', pricePerRead: 0, decimals: 6 };
+  const dispose = c.subscribe(meta, () => {});
+  expect(typeof dispose).toBe('function');
+  dispose();
+  expect(c.subscriptionCount()).toBe(0);
+});
