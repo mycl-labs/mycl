@@ -32,3 +32,9 @@ describe('Feed', () => {
     expect(b.root.length).toBeGreaterThan(0);
   });
 });
+
+test('latest clamps to available samples', () => {
+  const { Feed } = require('../src/feed');
+  const f = new Feed(meta, [ { slot: 1, value: 1, ts: 1 }, { slot: 2, value: 2, ts: 2 } ]);
+  expect(f.latest(10).length).toBe(2);
+});
