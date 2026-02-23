@@ -22,3 +22,9 @@ describe('compression', () => {
     expect(c.originalSize).toBe(0);
   });
 });
+
+test('compression ratio is reported', () => {
+  const { compress } = require('../src/compression');
+  const c = compress(new Uint8Array([1,1,1,1,1,1]));
+  expect(c.compressionRatio).toBeGreaterThan(0);
+});
