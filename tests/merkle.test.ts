@@ -27,3 +27,9 @@ describe('merkle', () => {
     expect(verifyProof(new Uint8Array([9]), proof, 0, root)).toBe(false);
   });
 });
+
+test('treeDepth grows logarithmically', () => {
+  const { treeDepth } = require('../src/utils/merkle');
+  expect(treeDepth(1)).toBeLessThanOrEqual(1);
+  expect(treeDepth(1024)).toBe(10);
+});
