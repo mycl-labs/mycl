@@ -19,3 +19,8 @@ describe('schema', () => {
     })).toThrow();
   });
 });
+
+test('FeedCategory includes nft once added', () => {
+  const { FeedCategory } = require('../src/schema');
+  expect(FeedCategory.options).toContain('nft');
+});
