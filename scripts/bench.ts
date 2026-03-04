@@ -9,7 +9,7 @@ function bench(n: number) {
   return t1 - t0;
 }
 
-for (const n of [256, 1024, 8192]) {
+for (const n of [256, 1024, 8192, 32768]) {
   const ms = bench(n);
   console.log(`leaves=${n.toString().padStart(5)} root=${ms}ms`);
 }
