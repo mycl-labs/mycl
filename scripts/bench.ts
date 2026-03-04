@@ -13,3 +13,5 @@ for (const n of [256, 1024, 8192]) {
   const ms = bench(n);
   console.log(`leaves=${n.toString().padStart(5)} root=${ms}ms`);
 }
+
+console.log('done');
