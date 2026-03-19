@@ -7,7 +7,7 @@ async function main() {
   const bonk = feeds.find((f) => f.slug === 'bonk.usd.spot');
   if (!bonk) return;
   const unsub = client.subscribe(bonk, (s) => console.log('bonk tick', s.value));
-  setTimeout(unsub, 10_000);
+  setTimeout(() => { unsub(); console.log('done'); }, 10_000);
 }
 
 if (require.main === module) { main(); }
