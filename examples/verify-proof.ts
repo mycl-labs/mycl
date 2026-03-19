@@ -9,7 +9,7 @@ const env = {
 
 try {
   const ok = verifyEnvelope(env);
-  console.log(describeEnvelope(env), 'verified =', ok);
+  console.log(describeEnvelope(env), 'verified=', ok);
 } catch (err) {
   console.error('proof rejected:', (err as Error).message);
 }
