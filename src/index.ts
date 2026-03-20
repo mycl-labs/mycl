@@ -11,7 +11,7 @@ export { rpcCall } from './transport';
 export type { TransportOptions } from './transport';
 export { FeedCategory, FeedSampleSchema, FeedMetadataSchema, FeedBatchSchema } from './schema';
 export type { FeedSample, FeedMetadata, FeedBatch } from './schema';
-export { HyphaError, CompressionError, ProofError, TransportError } from './errors';
+export { HyphaError, CompressionError, ProofError, TransportError, SubscriptionError } from './errors';
 export {
   PROTOCOL_NAME,
   PROTOCOL_VERSION,
