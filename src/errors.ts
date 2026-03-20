@@ -27,3 +27,10 @@ export class TransportError extends HyphaError {
     this.status = status;
   }
 }
+
+export class SubscriptionError extends HyphaError {
+  constructor(message: string) {
+    super(message);
+    this.name = 'SubscriptionError';
+  }
+}
