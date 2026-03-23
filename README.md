@@ -2,7 +2,7 @@
 
 <h1 align="center">MYCL</h1>
 
-<p align="center"><em>Solana's underground data layer. ZK-compressed feed marketplace built on Light Protocol.</em></p>
+<p align="center"><em>Solana's underground data layer. A ZK-compressed feed marketplace built on Light Protocol.</em></p>
 
 <p align="center">
   <a href="https://mycldot.fun"><img src="https://img.shields.io/badge/website-mycldot.fun-7B2D8E?style=flat-square&labelColor=0D0A06" alt="Website"/></a>
@@ -79,8 +79,7 @@ const unsub = client.subscribe(feeds[0], (sample) => console.log(sample.value));
 | Subscriber read latency | 210ms | 11ms (warm) | ~95% lower |
 | Publisher batch cost | 0.0042 SOL | 0.00004 SOL | 100x cheaper |
 
-Numbers come from the bench script in `scripts/bench.ts`; run it against your own RPC
-endpoint to reproduce. Slot cadence is assumed at 400 ms.
+Numbers come from `scripts/bench.ts`. Run it against your own RPC endpoint to reproduce.
 
 ## Contributing
 
