@@ -88,4 +88,4 @@ For bigger changes open an issue first so the interface can be discussed.
 
 ## License
 
-MIT. Copyright (c) 2025-2026 mycl-labs.
+MIT. Copyright (c) 2025-2026 mycl-labs. See `LICENSE` for the full text.
