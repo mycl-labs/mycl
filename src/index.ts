@@ -20,4 +20,6 @@ export {
   LIGHT_PHOTON_RPC,
   FEED_ROOT_SEED,
   MAX_BATCH_SIZE,
+  DEFAULT_RETRY_MAX,
+  DEFAULT_RETRY_BACKOFF_MS,
 } from './constants';
