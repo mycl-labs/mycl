@@ -78,6 +78,7 @@ const unsub = client.subscribe(feeds[0], (sample) => console.log(sample.value));
 | 10k samples storage | ~2.0 SOL | ~0.002 SOL | 1000x cheaper |
 | Subscriber read latency | 210ms | 11ms (warm) | ~95% lower |
 | Publisher batch cost | 0.0042 SOL | 0.00004 SOL | 100x cheaper |
+| Proof verification | 0.8ms | 0.8ms | client-side |
 
 Numbers come from `scripts/bench.ts`. Run it against your own RPC endpoint to reproduce.
 
