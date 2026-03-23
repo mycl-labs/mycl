@@ -8,6 +8,7 @@ export type { CompressedPayload } from './compression';
 export { verifyEnvelope, describeEnvelope } from './proof';
 export type { ProofEnvelope } from './proof';
 export { rpcCall } from './transport';
+export { buildRoot, buildProof, verifyProof, treeDepth } from './utils/merkle';
 export type { TransportOptions } from './transport';
 export { FeedCategory, FeedSampleSchema, FeedMetadataSchema, FeedBatchSchema } from './schema';
 export type { FeedSample, FeedMetadata, FeedBatch } from './schema';
