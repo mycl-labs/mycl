@@ -61,6 +61,8 @@ export class HyphaClient {
     return this.subs.subscribe(meta, handler);
   }
 
+  activeSlugs(): string[] { return this.subs.list().map((m) => m.slug); }
+
   subscriptionCount(): number {
     return this.subs.size();
   }
