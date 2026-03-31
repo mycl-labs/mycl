@@ -8,7 +8,7 @@
   "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "jest --passWithNoTests --silent",
+    "test": "jest --passWithNoTests",
     "lint": "tsc --noEmit",
     "bench": "ts-node scripts/bench.ts"
   },
