@@ -9,3 +9,6 @@ export const MIN_SUBSCRIPTION_SLOTS = 216_000; // ~1 day at 400ms slots
 export const PROOF_HASH_ALGO = 'sha256';
 export const DEFAULT_RETRY_MAX = 4;
 export const DEFAULT_RETRY_BACKOFF_MS = 250;
+
+// Default subscriber polling interval when websockets are unavailable.
+export const DEFAULT_POLL_MS = 1500;
