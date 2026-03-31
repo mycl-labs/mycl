@@ -20,7 +20,7 @@ export function treeDepth(leaves: number): number { return Math.max(1, Math.ceil
 
 export function buildRoot(leaves: Uint8Array[]): Uint8Array {
   if (leaves.length === 0) return new Uint8Array(32);
-  let level = leaves.map(hashLeaf);
+  let level: Uint8Array[] = leaves.map(hashLeaf);
   while (level.length > 1) {
     const next: Uint8Array[] = [];
     for (let i = 0; i < level.length; i += 2) {
