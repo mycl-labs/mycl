@@ -27,3 +27,6 @@ npx ts-node examples/subscribe-bot.ts
 
 If `npm run build` complains about TypeScript versions, pin `typescript@5.5.x`
 in your environment and clear `node_modules` before retrying.
+
+The examples folder is driven by `ts-node`; pin `ts-node@10.9.x` for consistent
+behaviour across platforms.
