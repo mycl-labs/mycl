@@ -24,7 +24,7 @@ leaves down to a rounding error, anchored on Solana through Light Protocol. Publ
 write once, subscribers read with a proof, and the root lives on mainnet forever.
 
 The metaphor is literal. Hypha threads are feed channels. Nodes are publisher hubs.
-Spores are referrals. What you see above ground is the fruiting body; the network lives
+Spores are referral invites. What you see above ground is the fruiting body; the network lives
 underneath.
 
 ## Architecture
