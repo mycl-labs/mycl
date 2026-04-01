@@ -22,3 +22,7 @@ of the protocol fee split. It is not required to consume the SDK.
 
 Any standard Solana wallet that signs arbitrary messages can publish. The SDK
 does not wrap the wallet; bring your own adapter.
+
+### Where can I read the manifesto?
+
+The long-form narrative lives at https://mycldot.fun/manifesto.
