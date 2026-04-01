@@ -29,3 +29,5 @@ samples for several hundred feeds before rotation is required.
 
 Trees rotate once they reach 90% fill to avoid probabilistic failure modes
 in the appender queue. Rotation is transparent to subscribers.
+
+See [proof verification](proof-verification.md) for the envelope format.
