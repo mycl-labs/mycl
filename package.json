@@ -1,6 +1,6 @@
 {
   "name": "@mycl/hypha",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Solana underground data layer. ZK-compressed feed marketplace SDK built on Light Protocol.",
   "license": "MIT",
   "main": "dist/index.js",
